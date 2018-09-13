@@ -3,105 +3,104 @@
 #include "acvconf.h"
 #include "acvShader.h"
 
-class ACVO
-{
+class ACVO {
   private:
-  //// Sphere Buffer
-  GLuint *sphereVertexBuffer;
-  GLuint sphereNormalBuffer;
-  GLuint sphereFaceBuffer;
-  GLuint *sphereColorBuffer;
-  
-  //// cone Buffer
-  GLuint *coneVertexBuffer;
-  GLuint coneNormalBuffer;
-  GLuint coneFaceBuffer;
-  GLuint *coneColorBuffer;
-  
-  //// Cylinder Buffer
-  GLuint *cylinderVertexBuffer;
-  GLuint cylinderNormalBuffer;
-  GLuint cylinderFaceBuffer;
-  GLuint *cylinderColorBuffer;
-  
-  //// System Box Buffer
-  GLuint BoxList;
-  GLuint boxVertexBuffer[2];
-  GLuint boxNormalBuffer[2];
-  GLuint boxFaceBuffer[2];
-  GLuint boxColorBuffer[2];
-  
-  //// Text DisplayList
-  GLuint TextList;
+    //// Sphere Buffer
+    GLuint *sphereVertexBuffer;
+    GLuint sphereNormalBuffer;
+    GLuint sphereFaceBuffer;
+    GLuint *sphereColorBuffer;
 
-  Type typ;
-  Type typ_box;
-  System sys;
-  
-  void changeDetail(void);
-  void changeObjects(void);
-  void setObjects(void);
-  void generateObjects(void);
-  void deleteObjects(void);
+    //// cone Buffer
+    GLuint *coneVertexBuffer;
+    GLuint coneNormalBuffer;
+    GLuint coneFaceBuffer;
+    GLuint *coneColorBuffer;
 
-  void setSphereNormals(const int mesh);
-  void setSphereVertices( const float scale, const int mesh);
-  void setSphereFaces(const int mesh);
-  void setSphereColors(const int mesh);
+    //// Cylinder Buffer
+    GLuint *cylinderVertexBuffer;
+    GLuint cylinderNormalBuffer;
+    GLuint cylinderFaceBuffer;
+    GLuint *cylinderColorBuffer;
 
-  void setConeNormals(const int mesh);
-  void setConeVertices(const float scale, const int mesh);
-  void setConeFaces(const int mesh);
-  void setConeColors(const int mesh);
+    //// System Box Buffer
+    GLuint BoxList;
+    GLuint boxVertexBuffer[2];
+    GLuint boxNormalBuffer[2];
+    GLuint boxFaceBuffer[2];
+    GLuint boxColorBuffer[2];
 
-  void setCylinderNormals(const int mesh);
-  void setCylinderVertices(const float scale, const int mesh);
-  void setCylinderFaces(const int mesh);
-  void setCylinderColors(const int mesh);
+    //// Text DisplayList
+    GLuint TextList;
 
-  void setBoxSphereNormals(const int mesh);
-  void setBoxSphereVertices(const float scale, const int mesh);
-  void setBoxSphereFaces(const int mesh);
-  void setBoxSphereColors(const int mesh);
-  void setBoxCylinderNormals(const int mesh);
-  void setBoxCylinderVertices(const float scale, const int mesh);
-  void setBoxCylinderFaces(const int mesh);
-  void setBoxCylinderColors(const int mesh);
-  void genCellBox(void);
-  void delCellBox(void);
-  void boxSphere(const int mesh);
-  void boxCylinder(const int mesh);
+    Type typ;
+    Type typ_box;
+    System sys;
 
-  ACVShader *shd;
-  GLuint pointsprite;
-  GLuint positionLoc,colorLoc,viewMatrixLoc,projMatrixLoc,lightLoc;
-  //GLint sizeLoc, backLoc, viewportLoc;
-  
-public:
-  ACVO(Type _typ, System _sys);
-  ~ACVO();
+    void changeDetail(void);
+    void changeObjects(void);
+    void setObjects(void);
+    void generateObjects(void);
+    void deleteObjects(void);
 
-  void resetObjects(System _sys);
-  void changeObjects(System _sys);
+    void setSphereNormals(const int mesh);
+    void setSphereVertices(const float scale, const int mesh);
+    void setSphereFaces(const int mesh);
+    void setSphereColors(const int mesh);
 
-  void Sphere(const int type, const int mesh);
-  void Cone(const int type, const int mesh);
-  void Cylinder(const int type, const int mesh);
+    void setConeNormals(const int mesh);
+    void setConeVertices(const float scale, const int mesh);
+    void setConeFaces(const int mesh);
+    void setConeColors(const int mesh);
 
-  void resetCellBox(void);
-  void setCellBox(void);
-  void drawCellBox(void);
+    void setCylinderNormals(const int mesh);
+    void setCylinderVertices(const float scale, const int mesh);
+    void setCylinderFaces(const int mesh);
+    void setCylinderColors(const int mesh);
 
-  void resetText(void);
-  void setText(const int list_num, const char *string);
-  void drawText(const int list_num);
+    void setBoxSphereNormals(const int mesh);
+    void setBoxSphereVertices(const float scale, const int mesh);
+    void setBoxSphereFaces(const int mesh);
+    void setBoxSphereColors(const int mesh);
+    void setBoxCylinderNormals(const int mesh);
+    void setBoxCylinderVertices(const float scale, const int mesh);
+    void setBoxCylinderFaces(const int mesh);
+    void setBoxCylinderColors(const int mesh);
+    void genCellBox(void);
+    void delCellBox(void);
+    void boxSphere(const int mesh);
+    void boxCylinder(const int mesh);
 
-  void initPointSprite330();
-  void initPointSprite120();
-  void drawPointSprite330(Particle *P, System sys);
-  void drawPointSprite120(Particle *P, System sys);
-  void initParticleTexture();
-  void drawParticleTexture(Particle *P, System sys,GLfloat *vm, Type typ);
+    ACVShader *shd;
+    GLuint pointsprite;
+    GLuint positionLoc, colorLoc, viewMatrixLoc, projMatrixLoc, lightLoc;
+    //GLint sizeLoc, backLoc, viewportLoc;
+
+  public:
+    ACVO(Type _typ, System _sys);
+    ~ACVO();
+
+    void resetObjects(System _sys);
+    void changeObjects(System _sys);
+
+    void Sphere(const int type, const int mesh);
+    void Cone(const int type, const int mesh);
+    void Cylinder(const int type, const int mesh);
+
+    void resetCellBox(void);
+    void setCellBox(void);
+    void drawCellBox(void);
+
+    void resetText(void);
+    void setText(const int list_num, const char *string);
+    void drawText(const int list_num);
+
+    void initPointSprite330();
+    void initPointSprite120();
+    void drawPointSprite330(Particle *P, System sys);
+    void drawPointSprite120(Particle *P, System sys);
+    void initParticleTexture();
+    void drawParticleTexture(Particle *P, System sys, GLfloat *vm, Type typ);
 
 };
 #endif
