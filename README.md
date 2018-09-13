@@ -6,6 +6,18 @@
 
 Avogadro Challenge Viewer (ACV) is a particle visualization tool which is almost compatible to [cdview](http://polymer.apphy.u-fukui.ac.jp/~koishi/cdview.php). ACV had been developed by [Shigenori Matsumoto](https://github.com/bungee) and [Naoto Aoki](https://github.com/naoto-aoki). This software is forked from [bungee/Avogadro-Challenge-Viewer](https://github.com/bungee/Avogadro-Challenge-Viewer).
 
+## Examples
+
+    cd samples/collision
+    unzip files.zip
+    acv *.cd -c system_information.cfg
+
+The above will give following pictures.
+
+![images/collision1.png](images/collision1.png)
+![images/collision2.png](images/collision2.png)
+![images/collision3.png](images/collision3.png)
+
 ## See also
 
 - [bungee/Avogadro-Challenge-Viewer](https://github.com/bungee/Avogadro-Challenge-Viewer)
