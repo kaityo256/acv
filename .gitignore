@@ -4,3 +4,4 @@ demo
 *.o
 pointsprite330.h
 pointsprite120.h
+.vimrc.local
