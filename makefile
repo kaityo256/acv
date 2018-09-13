@@ -1,10 +1,7 @@
 CXX     = g++
 CXXFLAGS+= -O3
-#CXXFLAGS+= -DSHADER330
-#CXXFLAGS+= -DSHADER120
-#CXXFLAGS+= -DALPHA
 CXXFLAGS+= -DTEXTURE
-#CXXFLAGS+= -DFFMPEG
+CXXFLAGS+= -Wno-deprecated-declarations
 LDFLAGS += -framework GLUT -framework OpenGL -framework Foundation
 
 all: hex ACV FAST DEMO
