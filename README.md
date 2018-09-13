@@ -12,7 +12,7 @@ Avogadro Challenge Viewer (ACV) is a particle visualization tool which is almost
     unzip files.zip
     acv *.cd -c system_information.cfg
 
-The above will give following pictures.
+The above will give you following pictures.
 
 ![images/collision1.png](images/collision1.png)
 ![images/collision2.png](images/collision2.png)
