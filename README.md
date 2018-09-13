@@ -11,3 +11,8 @@ Avogadro Challenge Viewer (ACV) is a particle visualization tool which is almost
 - [bungee/Avogadro-Challenge-Viewer](https://github.com/bungee/Avogadro-Challenge-Viewer)
 - [cdview](http://polymer.apphy.u-fukui.ac.jp/~koishi/cdview.php)
 - The Japansese document by Matsumoto is available [here](http://bopper.t.u-tokyo.ac.jp/~matsumoto/acv/).
+- [MDACP](https://github.com/kaityo256/mdacp) MD software which uses acv for visualization.
+
+## History
+
+- 2018-09-13 forked from [bungee/Avogadro-Challenge-Viewer](https://github.com/bungee/Avogadro-Challenge-Viewer).
