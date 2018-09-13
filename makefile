@@ -50,3 +50,4 @@ clean:
 	rm -rf *.o
 	rm -rf pointsprite*.h
 	rm -rf acv acv_fast demo
+	rm -rf pointsprite330.h pointsprite120.h
