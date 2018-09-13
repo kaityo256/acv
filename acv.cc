@@ -1,7 +1,6 @@
 #include "acvconf.h"
 #include "acvObjects.h"
 #include "acvIO.h"
-#include <GLKit/GLKMatrix4.h>
 
 //----------------------------------------
 //mouse event
@@ -226,8 +225,7 @@ void displayRecord(void) {
 void display(void) {
   glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
   glLoadIdentity();
-  //gluLookAt(sys.distanceX, sys.distanceY, sys.distanceZ, 0.0, sys.distanceY, sys.distanceZ, 0.0, 0.0,1.0);
-  GLKMatrix4MakeLookAt(sys.distanceX, sys.distanceY, sys.distanceZ, 0.0, sys.distanceY, sys.distanceZ, 0.0, 0.0, 1.0);
+  gluLookAt(sys.distanceX, sys.distanceY, sys.distanceZ, 0.0, sys.distanceY, sys.distanceZ, 0.0, 0.0,1.0);
 
   displayCore();
 
