@@ -1,3 +1,4 @@
+#include <unistd.h>
 #include "acvIO.h"
 
 #define BUFFER_LENGTH 256
