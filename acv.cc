@@ -762,7 +762,7 @@ void SpecialKeyEvent(int key, int x, int y) {
     if (dr != 0.0) {
       GLfloat ar = dr * PI;
       GLfloat as = sin(ar) / dr;
-      GLfloat dq[4] = {cos(ar), 0.0, dy * as, dx * as };
+      GLfloat dq[4] = {std::cos(ar), 0.0, dy * as, dx * as };
       multQuatanion(tq, dq, sys.quatanion);
       rotatQuotanion(rt, tq);
     }
@@ -888,7 +888,7 @@ void motion(int x, int y) {
       if (dr != 0.0) {
         GLfloat ar = dr * PI;
         GLfloat as = sin(ar) / dr;
-        GLfloat dq[4] = {cos(ar), 0.0, dy * as, dx * as };
+        GLfloat dq[4] = {std::cos(ar), 0.0, dy * as, dx * as };
         multQuatanion(tq, dq, sys.quatanion);
         rotatQuotanion(rt, tq);
       }
